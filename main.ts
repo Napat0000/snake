@@ -69,7 +69,7 @@ basic.forever(function () {
         Food.set(LedSpriteProperty.Blink, 100)
         Score += 1
         Snakelength += 1
-        if (Snakelength == 20) {
+        if (Snakelength == 15) {
             basic.pause(2000)
             Pbody = [game.createSprite(0, 0)]
             Score = Score + randint(2, 5)
