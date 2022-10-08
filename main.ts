@@ -49,9 +49,6 @@ basic.forever(function () {
                 Food.set(LedSpriteProperty.X, randint(0, 4))
                 Food.set(LedSpriteProperty.Y, randint(0, 4))
             }
-            if (Snakelength == 20) {
-                Pbody[index - 1].delete()
-            }
             if (Pbody[index - 1].isTouching(Phead)) {
                 Death()
             }
@@ -70,11 +67,8 @@ basic.forever(function () {
         Score += 1
         Snakelength += 1
         if (Snakelength == 15) {
-            basic.pause(2000)
-            Pbody = [game.createSprite(0, 0)]
-            Score = Score + randint(2, 5)
-            Snakespeed += -100
-            Snakelength = 1
+            basic.showString("Congratulations!!")
+            Death()
         } else {
             Pbody.unshift(game.createSprite(Pbx[Snakelength], Pby[Snakelength]))
         }
