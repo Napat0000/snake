@@ -66,12 +66,7 @@ basic.forever(function () {
         Food.set(LedSpriteProperty.Blink, 100)
         Score += 1
         Snakelength += 1
-        if (Snakelength == 15) {
-            basic.showString("Congratulations!!")
-            Death()
-        } else {
-            Pbody.unshift(game.createSprite(Pbx[Snakelength], Pby[Snakelength]))
-        }
+        Pbody.unshift(game.createSprite(Pbx[Snakelength], Pby[Snakelength]))
     }
     basic.pause(Snakespeed)
     Touchedge()
